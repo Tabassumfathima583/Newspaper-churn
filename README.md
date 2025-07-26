@@ -54,3 +54,8 @@ matplotlib
 seaborn
 xgboost
 scikit-learn
+
+git clone https://github.com/your-username/Newspaper-Churn-Prediction.git
+cd Newspaper-Churn-Prediction
+pip install -r requirements.txt
+
