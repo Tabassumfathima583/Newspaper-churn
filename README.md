@@ -1,50 +1,90 @@
 # 📰 Newspaper Churn Prediction
 
-A machine learning project to predict whether a newspaper subscriber will churn based on demographic and subscription data.
+A machine learning project to predict whether a newspaper customer will churn, based on demographic and behavioral data. This end-to-end solution covers data cleaning, feature engineering, model training, evaluation, and insightful visualizations.
 
 ---
 
 ## 📁 Dataset
 
-- **Source**: [Kaggle - Newspaper Churn Dataset](https://www.kaggle.com/datasets/leiyiting01/newspaper-churn)
-- **Rows**: 15,855
-- **Features**: Income, Age, Weekly Fee, Ethnicity, Subscription Info, etc.
+- **Source**: [Kaggle – Newspaper Churn](https://www.kaggle.com/datasets/leiyiting01/newspaper-churn)
+- **Records**: 15,855  
+- **Target Variable**: `Subscriber` (`YES` → 1, `NO` → 0)
 
 ---
 
-## 🔧 Process
+## 🧼 Data Preprocessing
 
-1. **Data Cleaning**
-   - Converted income ranges to numeric midpoints
-   - Encoded categorical features
-   - Handled missing values
-   - Removed address-level columns (e.g., Address, City)
-
-2. **EDA**
-   - Visualized class balance
-   - Correlation heatmap
-   - Feature importances
-
-3. **Modeling**
-   - Logistic Regression, Random Forest, and XGBoost
-   - **XGBoost** performed best:
-     - **Accuracy**: 84.83%
-     - **F1-score (churn class)**: 0.53
-
-4. **Feature Importance**
-   - Top features: Weekly Fee, Age, Home Ownership, etc.
+- Handled null values (`Language`, `Age range`, `weekly fee`)
+- Cleaned and encoded categorical features
+- Converted income, fee, and age ranges into numeric bins
+- Standardized and split data into training and test sets
 
 ---
 
-## 🔍 Sample Output
+## 📊 Exploratory Data Analysis
 
-📊 XGBoost Feature Importances  
-![Feature Importance](plots/feature_importance.png)
+### 📌 Churn Distribution  
+Shows class imbalance between churned and retained subscribers.
 
-📈 Correlation Heatmap  
-![Heatmap](plots/heatmap.png)
+![Churn Distribution](https://github.com/Tabassumfathima583/Newspaper-churn/blob/main/Images/Churn%20Distribution.png)
 
 ---
+
+### 📌 Correlation Heatmap  
+Visual representation of numerical feature relationships.
+
+![Correlation Heatmap](https://github.com/Tabassumfathima583/Newspaper-churn/blob/main/Images/Correlation%20heatmap.png)
+
+---
+
+## 🤖 Model Building & Comparison
+
+Three models were trained:
+
+| Model                | Accuracy |
+|---------------------|----------|
+| Logistic Regression | 81.68%   |
+| Random Forest       | 84.48%   |
+| **XGBoost**         | **84.83% ✅** |
+
+---
+
+## ✅ Final Model: XGBoost
+
+### 🧠 Top 10 Features  
+Features that contributed most to predictions.
+
+![Top 10 Features](https://github.com/Tabassumfathima583/Newspaper-churn/blob/main/Images/Top%2010%20features(XGBoost).png)
+
+---
+
+### 📈 Evaluation Metrics  
+Detailed precision, recall, and F1-score for each class.
+
+![Evaluation Metrics](https://github.com/Tabassumfathima583/Newspaper-churn/blob/main/Images/Evaluation%20metrics.png)
+
+---
+
+## 🖼️ Project Poster  
+A visual summary of the project in one slide.
+
+![Poster](https://github.com/Tabassumfathima583/Newspaper-churn/blob/main/Images/poster.png)
+
+---
+
+## 📌 Conclusion
+
+- **XGBoost** was the most accurate and stable model
+- Feature importance insights help interpret model behavior
+- Imbalanced class performance could be improved using SMOTE or class weights
+
+---
+
+## 🚀 Future Work
+
+- Try advanced techniques for imbalance (SMOTE, Ensemble tuning)  
+- Deploy model via Streamlit/Flask for user prediction  
+- Add SHAP/ELI5 explainability for transparency  
 
 ## 📦 Requirements
 
