@@ -65,13 +65,6 @@ Detailed precision, recall, and F1-score for each class.
 
 ---
 
-## 🖼️ Project Poster  
-A visual summary of the project in one slide.
-
-![Poster](https://github.com/Tabassumfathima583/Newspaper-churn/blob/main/Images/poster.png)
-
----
-
 ## 📌 Conclusion
 
 - **XGBoost** was the most accurate and stable model
@@ -79,12 +72,6 @@ A visual summary of the project in one slide.
 - Imbalanced class performance could be improved using SMOTE or class weights
 
 ---
-
-## 🚀 Future Work
-
-- Try advanced techniques for imbalance (SMOTE, Ensemble tuning)  
-- Deploy model via Streamlit/Flask for user prediction  
-- Add SHAP/ELI5 explainability for transparency  
 
 ## 📦 Requirements
 
@@ -95,7 +82,7 @@ seaborn
 xgboost
 scikit-learn
 
-git clone https://github.com/your-username/Newspaper-Churn-Prediction.git
+git clone https://github.com/Tabassumfathima583/Newspaper-Churn-Prediction.git
 cd Newspaper-Churn-Prediction
 pip install -r requirements.txt
 
