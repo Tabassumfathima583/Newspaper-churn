@@ -1,0 +1,8 @@
+## 📦 Requirements
+
+```bash
+pandas
+matplotlib
+seaborn
+xgboost
+scikit-learn
